@@ -1,0 +1,145 @@
+{
+    //Editor settings
+    "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "FiraCode NFM",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": false,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.8,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.mouseWheelZoom": true,
+    "editor.cursorStyle": "line",
+    "editor.renderLineHighlight": "gutter",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    //Workbench settings
+    "workbench.editor.labelFormat": "short",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.activityBar.location": "top",
+    //Explorer settings
+    "explorer.compactFolders": false,
+    //breadcrumbs settings
+    "breadcrumbs.enabled": false,
+    //Window settings
+    "window.title": "Vasco é lindo",
+    //Apc settings
+    /*     "apc.stylesheet": {
+        ".title-label > h2": "display: none",
+        ".editor-actions": "display: none",
+        ".nosidebar .inline-tabs-placeholder": "width: 75px",
+        ".pane-header": "padding: 0 8px",
+        ".pane-body": "padding: 8px",
+        ".split-view-view:first-child .pane-header": "display: none !important;",
+        ".monaco-list-row": "border-radius: 4px;",
+        ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
+    }, */
+    "apc.font.family": "FiraCode NFM",
+    "apc.listRow": {
+        "height": 24
+    },
+    //Markdown settings
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    //Git settings
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    //Terminal settings
+    "terminal.integrated.fontFamily": "FiraCode NFM",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.external.windowsExec": "C:\\Users\\pinto\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Ubuntu (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
+        }
+    },
+    "remote.SSH.remotePlatform": {
+        "192.168.1.201": "linux"
+    },
+    "github.copilot.enable": {
+        "*": true,
+    },
+    //Linguages settings   
+    "editor.formatOnSave": true,
+    "[c]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[java]": {
+        "editor.formatOnSave": true,
+    },
+    "java.saveActions.organizeImports": true,
+    "oracledevtools.bookmarkFileFolder": "C:\\Users\\pinto\\Oracle\\oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "C:\\Users\\pinto\\downloads",
+    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\pinto\\Oracle\\network\\admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\pinto\\Oracle\\network\\admin",
+    "oracledevtools.connections": [
+        {
+            "authenticationType": 2,
+            "dBAPrivilege": "None",
+            "userID": "LAPR3",
+            "passwordSaved": true,
+            "password": "lapr3",
+            "dataSource": "localhost:1521/XE",
+            "connectionType": 2,
+            "databaseHostName": "localhost",
+            "databasePortNumber": "1521",
+            "databaseServiceName": "XE",
+            "tnsAdmin": "C:\\Users\\pinto\\Oracle\\network\\admin",
+            "name": "LAPR3.XE",
+            "color": "none",
+            "currentSchema": "",
+            "addSettingsScopeToConnectionName": false,
+            "addCurrentSchemaToConnectionName": false,
+            "filters": [],
+            "useCompatibleNamesDirectoryPath": true
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "[oraclesql]": {
+        "editor.suggest.showSnippets": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "java.format.comments.enabled": false,
+    "window.zoomLevel": 1,
+    "oracledevtools.defaultConnection": "",
+    "livePreview.defaultPreviewPath": "c:/Users/pinto/Downloads/bootstrap-4.0.0/bootstrap-4.0.0/index.html",
+    "window.titleBarStyle": "custom",
+    "extensions.ignoreRecommendations": true,
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    "window.density.editorTabHeight": "compact",
+    "workbench.layoutControl.enabled": false,
+}
