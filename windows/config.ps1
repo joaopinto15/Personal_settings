@@ -1,29 +1,16 @@
-### PowerShell template profile 
-### Version 1.03 - Tim Sneath <tim@sneath.org>
-### From https://gist.github.com/timsneath/19867b12eee7fd5af2ba
-###
-### This file should be stored in $PROFILE.CurrentUserAllHosts
-### If $PROFILE.CurrentUserAllHosts doesn't exist, you can make one with the following:
-###    PS> New-Item $PROFILE.CurrentUserAllHosts -ItemType File -Force
-### This will create the file and the containing subdirectory if it doesn't already 
-###
-### As a reminder, to enable unsigned script execution of local scripts on client Windows, 
-### you need to run this line (or similar) from an elevated PowerShell prompt:
-###   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-### This is the default policy on Windows Server 2012 R2 and above for server Windows. For 
-### more information about execution policies, run Get-Help about_Execution_Policies.
-
-
 # Find out if the current user identity is elevated (has admin rights)
 $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
 $principal = New-Object Security.Principal.WindowsPrincipal $identity
 $isAdmin = $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
-# If so and the current host is a command line, then change to red color 
+# If so and the current host is a command line, then change to red color
+if ($isAdmin -and $Host.Name -eq "ConsoleHost") {
+    $Host.UI.RawUI.ForegroundColor = "Red"
+}
 # as warning to user that they are operating in an elevated context
 # Useful shortcuts for traversing directories
-function cd... { Set-Location ..\.. }
-function cd.... { Set-Location ..\..\.. }
+function z... { Set-Location ..\.. }
+function z.... { Set-Location ..\..\.. }
 
 # Compute file hashes - useful for checking successful downloads 
 function md5 { Get-FileHash -Algorithm MD5 $args }
@@ -210,6 +197,10 @@ function pgrep($name) {
     Get-Process $name
 }
 
-
-## Final Line to set prompt
-oh-my-posh init pwsh --config 'C:\Users\pinto\AppData\Local\Programs\oh-my-posh\themes\wopian.omp.json' | Invoke-Expression
+# Open the broswer and search for the given term
+function search {
+    $search = "https://scoop.sh/#/apps?q=" + $args
+    Start-Process $search    
+}
+# A faster way to navigate your filesystem
+Invoke-Expression (& { (zoxide init powershell | Out-String) })

@@ -1,46 +1,42 @@
 {
     //Editor settings
-    "editor.inlineSuggest.enabled": true,
-    "editor.fontFamily": "FiraCode NFM",
-    "editor.fontLigatures": true,
-    "editor.formatOnPaste": false,
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontSize": 14,
+    "editor.formatOnPaste": false,
+    "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 1.8,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.formatOnSave": true,
     "editor.rulers": [
         80,
         120
     ],
-    "editor.mouseWheelZoom": true,
-    "editor.cursorStyle": "line",
-    "editor.renderLineHighlight": "gutter",
-    "editor.minimap.enabled": false,
-    "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.fontLigatures": true,
     //Workbench settings
-    "workbench.editor.labelFormat": "short",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.editor.showTabs": "multiple",
     "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
     //Explorer settings
     "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": true,
     //breadcrumbs settings
     "breadcrumbs.enabled": false,
-    //Window settings
-    "window.title": "Vasco é lindo",
+    "window.density.editorTabHeight": "compact",
+    "window.menuBarVisibility": "toggle",
+    "window.title": " ",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0.5,
     //Apc settings
-    /*     "apc.stylesheet": {
-        ".title-label > h2": "display: none",
-        ".editor-actions": "display: none",
-        ".nosidebar .inline-tabs-placeholder": "width: 75px",
-        ".pane-header": "padding: 0 8px",
-        ".pane-body": "padding: 8px",
-        ".split-view-view:first-child .pane-header": "display: none !important;",
-        ".monaco-list-row": "border-radius: 4px;",
-        ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "display: none;"
-    }, */
-    "apc.font.family": "FiraCode NFM",
+    "apc.font.family": "FiraCode Nerd Font",
     "apc.listRow": {
         "height": 24
     },
@@ -48,98 +44,275 @@
     "markdown.preview.scrollEditorWithPreview": true,
     "markdown.preview.scrollPreviewWithEditor": true,
     //Git settings
-    "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    "security.workspace.trust.untrustedFiles": "open",
+    "git.enableSmartCommit": true,
     //Terminal settings
-    "terminal.integrated.fontFamily": "FiraCode NFM",
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.external.windowsExec": "C:\\Users\\pinto\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.gpuAcceleration": "off",
     "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
         "Command Prompt": {
+            "args": [],
+            "icon": "terminal-cmd",
             "path": [
                 "${env:windir}\\Sysnative\\cmd.exe",
                 "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
+            ]
         },
         "Git Bash": {
             "source": "Git Bash"
         },
+        "PowerShell": {
+            "icon": "terminal-powershell",
+            "source": "PowerShell"
+        },
         "Ubuntu (WSL)": {
-            "path": "C:\\WINDOWS\\System32\\wsl.exe",
             "args": [
                 "-d",
                 "Ubuntu"
-            ]
+            ],
+            "path": "C:\\WINDOWS\\System32\\wsl.exe"
         }
     },
+    //Remote settings
     "remote.SSH.remotePlatform": {
         "192.168.1.201": "linux"
     },
+    //GitHub settings
     "github.copilot.enable": {
-        "*": true,
+        "*": true
     },
-    //Linguages settings   
-    "editor.formatOnSave": true,
+    //Language settings
     "[c]": {
-        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
         "editor.suggest.insertMode": "replace",
-        "editor.semanticHighlighting.enabled": true
+        "editor.wordBasedSuggestions": "off"
     },
     "[java]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": true
     },
-    "java.saveActions.organizeImports": true,
-    "oracledevtools.bookmarkFileFolder": "C:\\Users\\pinto\\Oracle\\oracle.oracledevtools",
-    "oracledevtools.download.otherFolder": "C:\\Users\\pinto\\downloads",
-    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\pinto\\Oracle\\network\\admin",
-    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\pinto\\Oracle\\network\\admin",
-    "oracledevtools.connections": [
-        {
-            "authenticationType": 2,
-            "dBAPrivilege": "None",
-            "userID": "LAPR3",
-            "passwordSaved": true,
-            "password": "lapr3",
-            "dataSource": "localhost:1521/XE",
-            "connectionType": 2,
-            "databaseHostName": "localhost",
-            "databasePortNumber": "1521",
-            "databaseServiceName": "XE",
-            "tnsAdmin": "C:\\Users\\pinto\\Oracle\\network\\admin",
-            "name": "LAPR3.XE",
-            "color": "none",
-            "currentSchema": "",
-            "addSettingsScopeToConnectionName": false,
-            "addCurrentSchemaToConnectionName": false,
-            "filters": [],
-            "useCompatibleNamesDirectoryPath": true
-        }
-    ],
-    "explorer.confirmDelete": false,
     "[oraclesql]": {
-        "editor.suggest.showSnippets": true,
         "editor.quickSuggestions": {
             "comments": "on",
             "strings": "on",
             "other": "on"
-        }
+        },
+        "editor.suggest.showSnippets": true
     },
-    "java.format.comments.enabled": false,
-    "window.zoomLevel": 1,
-    "oracledevtools.defaultConnection": "",
-    "livePreview.defaultPreviewPath": "c:/Users/pinto/Downloads/bootstrap-4.0.0/bootstrap-4.0.0/index.html",
-    "window.titleBarStyle": "custom",
+    //Extension settings
     "extensions.ignoreRecommendations": true,
+    //Security settings
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+    //VIM motion settings
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NAVIGATION
+        // switch b/w buffers
+        {
+            "before": [
+                "<S-h>"
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<S-l>"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        // splits
+        {
+            "before": [
+                "leader",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                ":split"
+            ]
+        },
+        // panes
+        {
+            "before": [
+                "leader",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.focusBelowGroup"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.focusAboveGroup"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        // NICE TO HAVE
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                ":q!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "x"
+            ],
+            "commands": [
+                ":x!"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        // Move selected lines while staying in visual mode
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        // toggle comment selection
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        }
+    ],
     "window.commandCenter": false,
-    "window.menuBarVisibility": "toggle",
-    "window.density.editorTabHeight": "compact",
     "workbench.layoutControl.enabled": false,
 }
